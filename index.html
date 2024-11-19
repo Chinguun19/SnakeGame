@@ -10,13 +10,19 @@
 <body>
     <div class="board" id="board"></div>
     <div style="text-align: center">
+        <button onclick="startGame();">Start</button>
+        <button onclick="stopGame();">Pause</button>
+        <button onclick="resetGame();">Restart</button>
+    </div>
+
+
+    <div style="text-align: center">
         <button onclick="changeDirection('up');">Up</button>
         <button onclick="changeDirection('down');">Down</button>
         <button onclick="changeDirection('left');">Left</button>
         <button onclick="changeDirection('right');">Right</button>
     </div>
 
-    <script src="app.js">
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>

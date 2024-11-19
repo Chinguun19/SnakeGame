@@ -1,10 +1,10 @@
 #board {
     margin: 30px auto;
-    background-color: burlywood;
+    background-color: lightgreen;
     position: relative;
 }
 .snake {
     position: absolute;
-    background-color: blueviolet;
+    background-color: green;
     border-radius: 10px;
 }

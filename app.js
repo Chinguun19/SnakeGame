@@ -1,11 +1,13 @@
 let headTop = 10;
 let headLeft = 12;
 let direction = 'up';
+let intervalId;
+
 
 const config = {
-    size: 20,
+    size: 25,
     width: 35,
-    height: 40
+    height: 35
 };
 
 const boardEl = document.getElementById('board');
@@ -26,6 +28,13 @@ function goDown() {
         headTop = 0;
     }
     render();
+}
+
+
+function keyDown(){
+    addEventListener("keydown", (event) => {});
+    onkeydown = (event) => {};
+    console.log(event)
 }
 
 function changeDirection(newDirection) {
@@ -55,6 +64,20 @@ function goLeft() {
     render();
 }
 
+
+function startGame (){
+    if (!intervalId) {
+    intervalId = setInterval(gameLoop, 300)
+    }
+}
+
+function stopGame(){
+    clearInterval(intervalId);
+    intervalId = null;
+
+}
+
+
 function gameLoop() {
     switch (direction) {
         case 'up':
@@ -71,8 +94,7 @@ function gameLoop() {
             break;
     }
 }
-
-setInterval(gameLoop, 400);
+intervalId = setInterval(gameLoop, 200);
 
 
 function foodLocation(){
@@ -91,7 +113,4 @@ function render() {
 }
 
 
-
-render();
-food();
 
